@@ -1,0 +1,63 @@
+.btn {
+    width: 265px;
+    // height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    border-radius: 100px;
+    background-color: $orange;
+    font-family: raleway-700;
+    font-size: 25px;
+    transition: $time all ease;
+    border: 2px solid $orange;
+    cursor: pointer;
+
+
+    &-190 {
+        width: 190px;
+        height: 50px;
+    }
+
+    &-750 {
+        max-width: 750px;
+        width: 100%;
+        padding: 30px 78px;
+        font-size: 45px;
+
+        &--fn-55 {
+            font-size: 55px;
+        }
+    }
+
+    &-answ {
+        flex: 1 1 calc((100% / 2) - 40px);
+        font-family: raleway-700;
+        font-size: 55px;
+        background: #F3F3F3;
+        box-shadow: 0px 2px 20px #FF4E1C;
+        border-radius: 30px;
+        padding: 60px 0;
+        color: $black;
+        text-align: center;
+        margin-bottom: 30px;
+        transition: $time all;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $orange;
+            color: $white;
+        }
+    }
+
+
+    &:hover {
+        background-color: $white;
+        color: $orange;
+    }
+}
+
+.btn-active {
+    background-color: $orange;
+    color: $white;
+}

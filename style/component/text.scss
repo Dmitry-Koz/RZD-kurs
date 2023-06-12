@@ -1,0 +1,37 @@
+.text {
+    
+    &-header {
+        font-family: raleway-400;
+        font-size: 25px;
+        
+        &-active {
+            font-family: raleway-700;
+        }
+    }
+
+    &-logo {
+        font-family: raleway-700;
+        font-size: 25px;
+    }
+
+    &-500 {
+        font-family: raleway-500;
+
+        &--18 {
+            font-size: 18px;
+        }
+        &--25 {
+            font-size: 25px;
+        }
+        &--orange {
+            color: $orange;
+        }
+    }
+
+    &-quest {
+        font-family: raleway-400;
+        font-size: 55px;
+        text-align: center;
+    }
+
+}

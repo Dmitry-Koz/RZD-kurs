@@ -1,0 +1,28 @@
+.title {
+    &-start {
+        font-family: raleway-700;
+        font-size: 25px;
+    }
+
+    &-main {
+        font-family: raleway-700;
+        font-size: 70px;
+        color: $orange;
+
+        &--black {
+            color: $black;
+            font-family: raleway-800;
+        }
+    }
+
+    &-test {
+        font-family: raleway-600;
+        font-size: 65px;
+        color: $white;
+    }
+
+    &-quest {
+        font-family: raleway-600;
+        font-size: 55px;
+    }
+}
