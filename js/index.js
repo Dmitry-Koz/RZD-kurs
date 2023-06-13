@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-
+    // Появление исчезновение хедера
     const header = document.querySelector('header');
     let prevScroll = window.scrollY;
     window.addEventListener('scroll', function(){
@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function(){
         prevScroll = window.scrollY;
     });
 
+
+    // Активация кнопки в тесте
     const btnAnsw = document.querySelectorAll('.btn-answ');
     btnAnsw.forEach(item =>{
         item.addEventListener('click', ()=>{
@@ -26,8 +28,20 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
 
+    // Открытие ответа на вопрос
 
-    const swiper = new Swiper('.swiper', {
+    const qustionBtn = document.querySelectorAll('.questions-items').forEach(function(item) {
+        item.addEventListener('click', function(){
+            item.classList.toggle('active-quest');
+            item.nextElementSibling.classList.toggle('show-answ');
+            // console.log(item.nextElementSibling)
+        });
+    });
+
+
+
+
+    const swiperFirst = new Swiper('.swiper', {
         // Optional parameters
         // direction: 'vertical',
         // loop: true,
@@ -46,6 +60,33 @@ document.addEventListener('DOMContentLoaded', function(){
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+
+        
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: '.swiper-scrollbar',
+        // },
+    });
+
+    const swiperSecond = new Swiper('.swiper-courses', {
+        // Optional parameters
+        // direction: 'vertical',
+        // loop: true,
+        spaceBetween: 25,
+        slidesPerView: 1.4,
+        // slidesPerGroup: 1,
+        centeredSlides: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev',
+        // },
 
         
         // And if we need scrollbar
