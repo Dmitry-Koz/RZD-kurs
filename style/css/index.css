@@ -310,7 +310,11 @@ a:hover {
     font-family: raleway-600;
     font-size: 25px;
     display: flex;
-    align-items: flex-end; }
+    align-items: flex-end;
+    cursor: pointer;
+    transition: 0.3s transform; }
+    .courses-item:hover {
+      transform: scale(1.05); }
   .courses-right {
     min-width: 0;
     width: 100%;
@@ -326,7 +330,7 @@ a:hover {
       border: 3px solid #FF4E1C;
       border-right: none;
       border-radius: 50px 0px 0px 50px;
-      z-index: 3; }
+      z-index: 1; }
   .courses .swiper-courses {
     background: #DFDFDF;
     border-radius: 50px 0px 0px 50px;
@@ -405,7 +409,11 @@ a:hover {
     border-radius: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: 0.3s transform; }
+    .news-joinclass:hover {
+      transform: scale(1.05); }
     .news-joinclass::before {
       content: '';
       position: absolute;
@@ -455,7 +463,16 @@ a:hover {
 
 .questions {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 100px; }
+  .questions-content {
+    display: flex;
+    justify-content: space-between; }
+  .questions-descr {
+    font-family: raleway-500;
+    font-size: 60px;
+    max-width: 690px;
+    margin-top: 125px; }
   .questions-items {
     max-width: 915px;
     width: 100%;
@@ -498,7 +515,7 @@ a:hover {
     transition: 0.3s all; }
 
 .show-answ {
-  height: 100%;
+  height: auto;
   opacity: 1; }
 
 .active-quest::after {
@@ -506,6 +523,16 @@ a:hover {
 
 .active-quest::before {
   transform: rotate(45deg); }
+
+.partners {
+  display: flex;
+  justify-content: center;
+  margin: 120px 0 100px; }
+  .partners-contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px; }
 
 .text-header {
   font-family: raleway-400;
@@ -549,6 +576,8 @@ a:hover {
   .title-main--black {
     color: #222222;
     font-family: raleway-800; }
+  .title-main--white {
+    color: #F3F3F3; }
 .title-test {
   font-family: raleway-600;
   font-size: 65px;
@@ -657,5 +686,50 @@ a:hover {
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 40px; }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background: #FF4E1C;
+  border-radius: 50px 50px 0px 0px;
+  margin: 0 50px;
+  padding: 71px 71px 180px 71px; }
+  .footer-contain {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    max-width: 800px;
+    width: 100%; }
+  .footer-logo {
+    max-width: 197px;
+    width: 100%;
+    font-family: raleway-700;
+    font-size: 25px;
+    color: #222222; }
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .footer-menu-item {
+    font-family: raleway-500;
+    font-size: 40px;
+    color: #F3F3F3;
+    cursor: pointer;
+    position: relative;
+    display: inline-block; }
+    .footer-menu-item::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      background-color: #F3F3F3;
+      bottom: 0;
+      transform-origin: right;
+      width: 100%;
+      transform: scale(0);
+      transition: 0.3s transform; }
+    .footer-menu-item:hover::before {
+      transform: scale(1);
+      transform-origin: left; }
 
 /*# sourceMappingURL=index.css.map */

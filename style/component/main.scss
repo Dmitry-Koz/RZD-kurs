@@ -319,6 +319,12 @@
         font-size: 25px;
         display: flex;
         align-items:flex-end;
+        cursor: pointer;
+        transition: $time transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
 
@@ -457,6 +463,12 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        cursor: pointer;
+        transition: $time transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
 
 
         &::before {
@@ -524,6 +536,19 @@
 .questions {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-descr {
+        font-family: raleway-500;
+        font-size: 60px;
+        max-width: 690px;
+        margin-top: 125px;
+    }
 
     &-items {
         max-width: 915px;
@@ -583,7 +608,7 @@
 }
 
 .show-answ {
-    height: 100%;
+    height: auto;
     opacity: 1;
 }
 
@@ -592,4 +617,18 @@
 }
 .active-quest::before{
     transform: rotate(45deg);
+}
+
+
+.partners {
+    display: flex;
+    justify-content: center;
+    margin: 120px 0 100px;
+
+    &-contain {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        margin-top: 25px;
+    }
 }

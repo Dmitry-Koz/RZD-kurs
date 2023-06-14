@@ -1,0 +1,57 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    background: #FF4E1C;
+    border-radius: 50px 50px 0px 0px;
+    margin: 0 50px;
+    padding: 71px 71px 180px 71px;
+
+    &-contain {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 65px;
+        max-width: 800px;
+        width: 100%;
+    }
+
+    &-logo {
+        max-width: 197px;
+        width: 100%;
+        font-family: raleway-700;
+        font-size: 25px;
+        color: $black;
+    }
+
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &-menu-item {
+        font-family: raleway-500;
+        font-size: 40px;
+        color: $white;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1px;
+            background-color: $white;
+            bottom: 0;
+            transform-origin: right;
+            width: 100%;
+            transform: scale(0);
+            transition: $time transform;
+        }
+
+        &:hover::before {
+            transform: scale(1);
+            transform-origin: left;
+        }
+    }
+}
